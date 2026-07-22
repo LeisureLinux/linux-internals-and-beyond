@@ -1,0 +1,68 @@
+# =============================================================
+# Linux internals and beyond — gitignore
+# Focus: notes / experiments / ebook index. Keep repo small.
+# =============================================================
+
+# ---- Editor / OS noise ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.iml
+
+# ---- Obsidian / Markdown notes ----
+.obsidian/
+.obsidian.vimrc
+.trash/
+*.trash/
+
+# ---- Ebook binaries (too large; track only the index/manifest) ----
+*.pdf
+*.epub
+*.mobi
+*.azw
+*.azw3
+*.djvu
+*.fb2
+*.lit
+*.chm
+
+# But DO track the index files
+!ebooks/README.md
+!books/README.md
+!ebooks/index.*
+!books/index.*
+
+# ---- Build artifacts ----
+*.o
+*.so
+*.a
+*.ko
+*.obj
+*.exe
+*.out
+*.dSYM/
+build/
+dist/
+
+# ---- Kernel / module sources (if you experiment locally) ----
+*.mod.c
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf.old
+
+# ---- Logs & dumps ----
+*.log
+*.dump
+core
+core.*
+
+# ---- Misc ----
+*.bak
+*.tmp
+.cache/
